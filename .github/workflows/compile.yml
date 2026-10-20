@@ -17,7 +17,7 @@ jobs:
     steps:
       - uses: actions/checkout@v6
       - name: install dependencies
-        run: sudo apt install -y --no-install-recommends texlive-latex-base texlive-latex-recommended texlive-latex-extra texlive-fonts-recommended latex-xcolor pandoc 
+        run: sudo apt install -y --no-install-recommends texlive-latex-base texlive-latex-recommended texlive-latex-extra texlive-fonts-recommended pandoc 
       - name: generate letter pdf
         run: pandoc --template=template-letter.tex example/letter.md -o letter.pdf 
       - name: upload letter.pdf
